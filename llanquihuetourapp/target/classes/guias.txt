@@ -1,0 +1,7 @@
+12345678-9,María,González,912345678,maria.g@email.com,Gastronomía,5,true,Español|Inglés
+98765432-1,José,Pérez,923456789,jose.p@email.com,Cultural,3,false,Español
+11111111-1,Ana,Martínez,934567890,ana.m@email.com,Naturaleza,7,true,Español|Inglés|Alemán
+22222222-2,Carlos,Rodríguez,945678901,carlos.r@email.com,Aventura,4,true,Español|Portugués
+33333333-3,Laura,Silva,956789012,laura.s@email.com,Gastronomía,6,false,Español
+44444444-4,Pedro,López,967890123,pedro.l@email.com,Cultural,8,true,Español|Inglés|Francés
+55555555-5,Isabel,Fernández,978901234,isabel.f@email.com,Naturaleza,2,false,Español
