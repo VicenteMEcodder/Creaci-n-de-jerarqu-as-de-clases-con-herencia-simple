@@ -1,4 +1,0 @@
-11111111-0,Operador,Norte,922222222,operador1@email.com,Turístico,Zona Norte,50
-22222222-0,Operador,Sur,933333333,operador2@email.com,Transporte,Zona Sur,30
-33333333-0,Operador,Centro,944444444,operador3@email.com,Gastronómico,Zona Centro,20
-44444444-0,Operador,Este,955555555,operador4@email.com,Cultural,Zona Este,40
