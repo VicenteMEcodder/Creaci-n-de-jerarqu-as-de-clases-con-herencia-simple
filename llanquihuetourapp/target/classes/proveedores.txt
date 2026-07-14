@@ -1,0 +1,5 @@
+99999999-9,Transportes,Los Lagos,977777777,transporte@email.com,Transporte,Terrestre,5
+88888888-8,Gastronomía,Sur,966666666,gastronomia@email.com,Alimentación,Gastronómico,4
+77777777-7,Aventura,Laguna,955555555,aventura@email.com,Recreación,Aventura,5
+66666666-6,Cultural,Chiloé,944444444,cultural@email.com,Cultural,Patrimonial,4
+55555555-5,Alojamiento,Puerto Varas,933333333,alojamiento@email.com,Hospedaje,Alojamiento,3

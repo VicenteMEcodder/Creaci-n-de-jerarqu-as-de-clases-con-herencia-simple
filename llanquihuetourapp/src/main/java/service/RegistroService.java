@@ -1,0 +1,121 @@
+package service;
+
+import model.Guia;
+import model.Proveedor;
+import data.DataManager;
+
+import java.util.Scanner;
+
+public class RegistroService {
+    private final DataManager dataManager;
+    private final Scanner scanner;
+
+    public RegistroService(DataManager dataManager) {
+        this.dataManager = dataManager;
+        this.scanner = new Scanner(System.in);
+    }
+
+    public void registrarNuevoGuia() {
+        System.out.println("\n=== REGISTRO DE NUEVO GUIA ===\n");
+        
+        try {
+            System.out.print("RUT: ");
+            String rut = scanner.nextLine();
+            
+            System.out.print("Nombre: ");
+            String nombre = scanner.nextLine();
+            
+            System.out.print("Apellido: ");
+            String apellido = scanner.nextLine();
+            
+            System.out.print("Telefono: ");
+            String telefono = scanner.nextLine();
+            
+            System.out.print("Email: ");
+            String email = scanner.nextLine();
+            
+            System.out.print("Especialidad: ");
+            String especialidad = scanner.nextLine();
+            
+            System.out.print("Anos de experiencia: ");
+            int anosExperiencia = Integer.parseInt(scanner.nextLine());
+            
+            System.out.print("Esta certificado? (true/false): ");
+            boolean certificado = Boolean.parseBoolean(scanner.nextLine());
+            
+            System.out.print("Idiomas: ");
+            String idiomas = scanner.nextLine();
+            
+            Guia nuevoGuia = new Guia(rut, nombre, apellido, telefono, email, 
+                                     especialidad, anosExperiencia, certificado, idiomas);
+            
+            dataManager.getGuias().add(nuevoGuia);
+            System.out.println("\nGuia registrado exitosamente!");
+            System.out.println(nuevoGuia);
+            
+        } catch (NumberFormatException e) {
+            System.err.println("Error: Formato de numero invalido. Intente nuevamente.");
+        } catch (Exception e) {
+            System.err.println("Error al registrar el guia: " + e.getMessage());
+        }
+    }
+
+    public void registrarNuevoProveedor() {
+        System.out.println("\n=== REGISTRO DE NUEVO PROVEEDOR ===\n");
+        
+        try {
+            System.out.print("RUT: ");
+            String rut = scanner.nextLine();
+            
+            System.out.print("Nombre: ");
+            String nombre = scanner.nextLine();
+            
+            System.out.print("Apellido: ");
+            String apellido = scanner.nextLine();
+            
+            System.out.print("Telefono: ");
+            String telefono = scanner.nextLine();
+            
+            System.out.print("Email: ");
+            String email = scanner.nextLine();
+            
+            System.out.print("Tipo de servicio: ");
+            String tipoServicio = scanner.nextLine();
+            
+            System.out.print("Rubro: ");
+            String rubro = scanner.nextLine();
+            
+            System.out.print("Calificacion (1-5): ");
+            int calificacion = Integer.parseInt(scanner.nextLine());
+            
+            Proveedor nuevoProveedor = new Proveedor(rut, nombre, apellido, telefono, email, 
+                                                    tipoServicio, rubro, calificacion);
+            
+            dataManager.getProveedores().add(nuevoProveedor);
+            System.out.println("\nProveedor registrado exitosamente!");
+            System.out.println(nuevoProveedor);
+            
+        } catch (NumberFormatException e) {
+            System.err.println("Error: Formato de numero invalido. Intente nuevamente.");
+        } catch (Exception e) {
+            System.err.println("Error al registrar el proveedor: " + e.getMessage());
+        }
+    }
+
+    public void mostrarMenuRegistro() {
+        System.out.println("\n=== MENU DE REGISTRO ===");
+        System.out.println("1. Registrar Guia");
+        System.out.println("2. Registrar Proveedor");
+        System.out.println("3. Volver al menu principal");
+        System.out.print("Seleccione una opcion: ");
+        
+        int opcion = Integer.parseInt(scanner.nextLine());
+        
+        switch (opcion) {
+            case 1 -> registrarNuevoGuia();
+            case 2 -> registrarNuevoProveedor();
+            case 3 -> System.out.println("Volviendo al menu principal...");
+            default -> System.out.println("Opcion no valida");
+        }
+    }
+}
